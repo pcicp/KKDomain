@@ -16,11 +16,11 @@
 - (NSDictionary *)etldRuleTree{
     static NSDictionary *rules = nil;
     if (!rules) {
-        for (NSBundle *bundle in [NSBundle allBundles]) {
+        NSBundle *bundle = [NSBundle bundleForClass:NSClassFromString(@"KKDomain")];
+        if (bundle) {
             NSString *rulePath = [bundle pathForResource:@"etld" ofType:@"plist"];
             if (rulePath) {
                 rules = [NSDictionary dictionaryWithContentsOfFile:rulePath];
-                break;
             }
         }
     }
