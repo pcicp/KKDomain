@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
   s.summary  = 'A objc library which gives access to the PSL (Public Suffix List)'
   s.author   = '卢克'
   s.source   = { 
-  	:git => 'https://github.com/kejinlu/KKDomain.git', 
-  	:branch => 'master' 
+  	:git => 'https://github.com/pcicp/KKDomain.git', 
+  	:branch => 'pcicp-patch-1' 
   }
 
   s.source_files   = "KKDomain/*.{h,m}"
